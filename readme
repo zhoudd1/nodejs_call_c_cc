@@ -1,20 +1,3 @@
-nodejs库安装，编译
-
-npm init
-npm install -save websocket
-npm install ref-array
-npm install -save ref-array
-npm install -save ref-struct
-npm rebuild
-
-交叉编译
-
-npm init
-npm install -save websocket --arch=arm
-npm install ref-array --arch=arm
-npm rebuild --arch=arm
-
-
 1) node-ffi编译
 node-gyp configure build
 交叉编译
@@ -36,6 +19,19 @@ export AR=arm-linux-gnueabihf-ar
 export LINK=arm-linux-gnueabihf-g++
 node-gyp configure --arch=arm
 node-gyp build --arch=arm
+
+3) nodejs库安装，编译
+npm init
+npm install -save websocket
+npm install ref-array
+npm install -save ref-array
+npm install -save ref-struct
+npm rebuild
+交叉编译
+npm init
+npm install -save websocket --arch=arm
+npm install ref-array --arch=arm
+npm rebuild --arch=arm
 
  
 
