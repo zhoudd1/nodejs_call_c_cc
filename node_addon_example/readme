@@ -1,0 +1,42 @@
+nodejs库安装，编译
+
+npm init
+npm install -save websocket
+npm install ref-array
+npm install -save ref-array
+npm install -save ref-struct
+npm rebuild
+
+交叉编译
+
+npm init
+npm install -save websocket --arch=arm
+npm install ref-array --arch=arm
+npm rebuild --arch=arm
+
+
+1) node-ffi编译
+node-gyp configure build
+交叉编译
+node-gyp --arch=arm configure build
+
+2) addon c++编译
+
+nodejs的C/C++拓展，将c/c++源码编译成js模板库
+node-gyp configure
+node-gyp build
+
+交叉编译
+
+export CC=arm-linux-gnueabihf-gcc
+export CXX=arm-linux-gnueabihf-g++
+export LD=arm-linux-gnueabihf-ld
+export RAINLIB=arm-linux-gnueabihf-rainlib
+export AR=arm-linux-gnueabihf-ar
+export LINK=arm-linux-gnueabihf-g++
+node-gyp configure --arch=arm
+node-gyp build --arch=arm
+
+ 
+
+

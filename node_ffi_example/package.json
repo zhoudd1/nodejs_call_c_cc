@@ -1,0 +1,14 @@
+{
+  "name": "websocket_node-ffi_proxy",
+  "version": "1.0.0",
+  "description": "To compile `libfactorial.dylib` on OS X:",
+  "main": "factorial.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ref-array": "^1.2.0"
+  }
+}
