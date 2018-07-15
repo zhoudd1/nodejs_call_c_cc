@@ -31,7 +31,7 @@ typedef struct
 }user_info_t;
 
 EXPORT gps_info_t* get_gps_info(void) {
-  gps = (gps_info_t*)malloc(sizeof(gps_info_t));
+  gps = (gps_info_t*)malloc(sizeof(gps_info_t));//这里仅测试用，实际就放到初始化的地方去吧
   gps->lon+=1;
   return gps;
 }
